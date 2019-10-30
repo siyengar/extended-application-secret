@@ -2,7 +2,7 @@
 
 This is the working area for the individual Internet-Draft, "Extended Application Secret for TLS 1.3".
 
-* [Editor's Copy](https://siyengar.github.io/extended-application-secret/#go.draft-iyengar-tls-extended-application-secret.html)
+* [Editor's Copy](https://siyengar.github.io/extended-application-secret/draft-iyengar-tls-extended-application-secret.html)
 * [Individual Draft](https://tools.ietf.org/html/draft-iyengar-tls-extended-application-secret)
 * [Compare Editor's Copy to Individual Draft](https://siyengar.github.io/extended-application-secret/#go.draft-iyengar-tls-extended-application-secret.diff)
 
