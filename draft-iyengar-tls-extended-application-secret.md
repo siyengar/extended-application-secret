@@ -176,8 +176,23 @@ their peer supported it.
 
 ## Downgrade protection
 
-The mechanism does not change the computation of the Finished message. Thus it
-should be subject to the same security properties of any extension negotiation.
+When introducing a mechanism to change key derivation, it's important to
+analyze whether or not there are mechanisms to downgrade the security of the
+negotiation.  This mechanism does not change the computation of the Finished
+message.  Thus it should be subject to the same security properties of any
+extension negotiation.  If an attacker tampers with the client's extension, the
+client would be able to detect that the server finished did not match.
+Similarly, if an attacker were to tamper with the server's extension, the
+client finished would not match the server's expected value and the server
+Finished would not match.
+
+## Pre-computation of the client's Finished
+
+In TLS 1.3, it's possible, in some cases, for the server to pre-compute the
+client's Finished message in order to send a session ticket before receiving
+the client's Finished message.  If an attacker tampers with the client or
+server extensions, the client would not process the ticket because the server's
+Finished message would not match.
 
 # IANA Considerations
 
